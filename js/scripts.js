@@ -5,30 +5,41 @@ function getInput(){
     DD = parseInt(document.getElementById("day").value);
     YY = parseInt(document.getElementById("year").value);
     CC = parseInt(document.getElementById("century").value);
-    // var calculations = "true"
+    if(century == ""){
+        alert("Fill in the correct century");
+        return false;
+      }else if (year == ""){
+        alert("Fill in the correct year");
+        return false;
+      }else if (month == ""){
+        alert("Month should be between 1 to 12");
+        return false;
+      }else if(day == ""){
+        alert("Date of month should be between 1 and 31");
+        return false;
+      }
 }
 function getDay() {
     getInput();
     calculations = ((parseInt(CC / 4) - 2 * CC - 1) + (parseInt(5 * YY / 4)) + (parseInt(26 * (MM + 1) / 10)) + DD) % 7;
     return calculations;
+
 }
 console.log(getDay());
 
 let malenames = ["Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 let femalenames = ["Akosua","Adwoa", "Abenaa","Akua","Yaa", "Afua","Ama" ]
-let day = getday();
+let dayNumber = getDay();
 function genderConfirm(){
     var gender = document.getElementsByName("radio")
     if (gender[0].checked == "true"){
         var sex = male;
     }else if (gender[1].checked == "true"){
         var sex = female;
-    }else{
-        console.log("pass")        
     }
 switch(sex){
    case sex = "male":
-       switch(day){
+       switch(dayNumber){
            case (0):
            document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[0];
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[0];
@@ -52,28 +63,28 @@ switch(sex){
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[6];              
         }
     case sex = "female":
-        switch(day){
+        switch(dayNumber){
            case (0):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[0];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[0];
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[0];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[0];
            case (1):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[1];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[1];
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[1];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[1];
            case (2):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[2];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[2];
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[2];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[2];
            case (3):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[3];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[3];         
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[3];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[3];         
            case (4):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[4];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[4];
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[4];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[4];
            case (5):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[5];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[5];
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[5];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[5];
            case (6):
-           document.getElementById("result").innerHTML = "Your Akan Name is" + malenames[6];
-           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + malenames[6];            
+           document.getElementById("result").innerHTML = "Your Akan Name is" + femalenames[6];
+           document.getElementById("SUBMIT").innerHTML = "Your Akan Name is" + femalenames[6];            
 
         } 
 }

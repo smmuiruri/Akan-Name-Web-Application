@@ -21,31 +21,31 @@
                 <h2>Enter your birthday date to know your Akan Name</h2>
                 </div>
                 <div class="card-body">
-                    <div class="row">                    
+                    <!-- <div class="row">                     -->
                     <form>
-                        <div class="col-md-6">                
+                        <!-- <div class="col-md-6">                 -->
                             <label for="Date">Date</label>
-                            <input type="number" class="form-control" placeholder="Date" id="day"><br>                       
+                            <input type="number" class="form-control" placeholder="Date" id="day" required min="1" max="31"><br>                       
                             <label for="Month">Month</label>
-                            <input type="number" class="form-control" placeholder="Month" id="month"><br>                
+                            <input type="number" class="form-control" placeholder="Month" id="month" required min="1" max="12"><br>                
                             <Label for="Year" class="label">Year</Label>
-                            <input type="number" class="form-control" placeholder="Year" id="year" number><br>                     
-                            <label forP="Century" class="label">Century</label>
-                            <input type="number" class="form-control" placeholder="Century" id="century"><br>
-                            <input type="radio" class="genders labels" value="male" id="radio" name="radio" required>Male
+                            <input type="number" class="form-control" placeholder="Year" id="year" required min="0" max="9999"><br>                     
+                            <label for="Century" class="label">Century</label>
+                            <input type="number" class="form-control" placeholder="Century" id="century" required min="0" max="30"><br>
+                            <input type="radio" class="genders labels" value="male" id="radio" name="radio">Male
                             <br>
-			                <input type="radio" class="genders labels" value="female" id="radio" name="radio" required>Female
+			                <input type="radio" class="genders labels" value="female" id="radio" name="radio">Female
                             <br>
-                        </div>
-                        <div class="col-md-6">                                               
-                        <a href="#result"><button name="button" class="btn btn-primary mb-2" type="button" onclick="getDay()">SUBMIT</button></a>    
+                        <!-- </div> -->
+                        <!-- <div class="col-md-6">                                                -->
+                        <button name="button" class="btn btn-primary mb-2" type="button" onclick="getDay()">SUBMIT</button>  
                         <br>
                         
                         <h3 id="result"></h3><br>
                         <h3 id="SUBMIT"></h3><br>
-                        </div>            
+                        <!-- </div>             -->
                     </form>
-                    </div>
+                    <!-- </div> -->
                 </div>               
             </div>    
         </div>
