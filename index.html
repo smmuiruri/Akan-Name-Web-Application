@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css type="text/css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
     <script src="js/scripts.js"></script>
     <title>Akan Name</title>
 
 </head>
-<body>
-    <div>
+<body>    
         <div class="container">
             <div class="jumbotron">
                 <h1>Welcome</h1>
@@ -22,13 +21,33 @@
                 <h2>Enter your birthday date to know your Akan Name</h2>
                 </div>
                 <div class="card-body">
-
-                </div>
-                <div class="card-footer">
-
-                </div>
+                    <div class="row">                    
+                    <form>
+                        <div class="col-md-6">                
+                            <label for="Date">Date</label>
+                            <input type="number" class="form-control" placeholder="Date" id="day"><br>                       
+                            <label for="Month">Month</label>
+                            <input type="number" class="form-control" placeholder="Month" id="month"><br>                
+                            <Label for="Year" class="label">Year</Label>
+                            <input type="number" class="form-control" placeholder="Year" id="year" number><br>                     
+                            <label forP="Century" class="label">Century</label>
+                            <input type="number" class="form-control" placeholder="Century" id="century"><br>
+                            <input type="radio" class="genders labels" value="male" id="radio" name="radio" required>Male
+                            <br>
+			                <input type="radio" class="genders labels" value="female" id="radio" name="radio" required>Female
+                            <br>
+                        </div>
+                        <div class="col-md-6">                                               
+                        <a href="#result"><button name="button" class="btn btn-primary mb-2" type="button" onclick="getDay()">SUBMIT</button></a>    
+                        <br>
+                        
+                        <h3 id="result"></h3><br>
+                        <h3 id="SUBMIT"></h3><br>
+                        </div>            
+                    </form>
+                    </div>
+                </div>               
             </div>    
         </div>
-    </div>
 </body>
 </html>
