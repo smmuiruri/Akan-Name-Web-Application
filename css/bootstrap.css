@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: rgb(189, 201, 192);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -279,14 +279,14 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  padding: 0;
+  padding: 4;
   border-style: none;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
+  box-sizing: auto;
+  padding: 4;
 }
 
 textarea {
@@ -296,7 +296,7 @@ textarea {
 
 fieldset {
   min-width: 0;
-  padding: 0;
+  padding: 4;
   margin: 0;
   border: 0;
 }
@@ -305,7 +305,7 @@ legend {
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: 0;
+  padding: 4;
   margin-bottom: .5rem;
   font-size: 1.5rem;
   line-height: inherit;
@@ -4740,17 +4740,17 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
+  position: center;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(177, 174, 171);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border: 20px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2rem;
 }
 
 .card > hr {
@@ -5268,10 +5268,10 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
-  border-radius: 0.3rem;
+  background-color: #87977a;
+  border-radius: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -5283,7 +5283,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron-fluid {
   padding-right: 0;
   padding-left: 0;
-  border-radius: 0;
+  border-radius: 10;
 }
 
 .alert {
@@ -6839,19 +6839,19 @@ button.bg-dark:focus {
 }
 
 .border-top-0 {
-  border-top: 0 !important;
+  border-top: 8 !important;
 }
 
 .border-right-0 {
-  border-right: 0 !important;
+  border-right: 8 !important;
 }
 
 .border-bottom-0 {
-  border-bottom: 0 !important;
+  border-bottom: 8 !important;
 }
 
 .border-left-0 {
-  border-left: 0 !important;
+  border-left: 8 !important;
 }
 
 .border-primary {
@@ -6859,7 +6859,7 @@ button.bg-dark:focus {
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: #7d6c6c !important;
 }
 
 .border-success {
