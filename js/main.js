@@ -8,7 +8,7 @@ function getInput(){
     if(CC <=0 || CC >30){
         alert("Fill in the correct century");
       }else if (YY <0 || YY >100){
-        alert("Fill in the correct year");
+        alert("Year within a century should be between 0 and 100");
       }else if (MM <=0 || MM>12){
         alert("Month should be between 1 to 12");
       }else if(DD <=0 || DD >31){
@@ -18,11 +18,11 @@ function getInput(){
 function getDay() {
     getInput();    
     let results = ((parseInt(CC / 4) - 2 * CC - 1) + (parseInt(5 * YY / 4)) + (parseInt(26 * (MM + 1) / 10)) + DD) % 7;
-    return results
+    return results;
   }
 
 let malenames = ["Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-let femalenames = ["Akosua","Adwoa", "Abenaa","Akua","Yaa", "Afua","Ama" ]
+let femalenames = ["Akosua","Adwoa", "Abenaa","Akua","Yaa", "Afua","Ama" ];
 
 function theName(){
   genderConfirm();
@@ -30,16 +30,18 @@ function theName(){
   console.log();  
 }
 function genderConfirm(){
-    var gender = document.getElementsByName("select")
-    if (gender[0].checked == true){
+    var gender = document.getElementsByName("select");
+    if (gender[0].checked){
         var sex = "male";
-    }else if (gender[1].checked == true){
+    }else if (gender[1].checked){
         var sex = "female";
+    }else {
+      console.log("pass");
     }
 switch(sex){
-   case sex = "male":
+   case "male":
        switch(dayNumber){
-           case (0):
+           case 0:
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is " + malenames[0];
            break;
            case (1):
@@ -60,10 +62,13 @@ switch(sex){
            case (6):
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is " + malenames[6];              
            break;
+           default:
           }
-    case sex = "female":
+        }
+    switch(sex){   
+    case "female":
         switch(dayNumber){
-           case (0):
+           case 0:
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is " + femalenames[0];
            break;
            case (1):
@@ -84,8 +89,9 @@ switch(sex){
            case (6):
            document.getElementById("SUBMIT").innerHTML = "Your Akan Name is " + femalenames[6];            
            break;
-        } 
+        }
+      default:
+        console.log("pass") 
 }
 }
-
  
